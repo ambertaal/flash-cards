@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Online flash cards</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Online flash cards</h1>
+      <p class="subtitle">Hover over the flash card to see the answer</p>
+
+      <div class="flash-card" id="flash-card">
+        <div class="flash-card-inner">
+          <div class="flash-card-front">
+            <h2>What are the different data types present in javascript?</h2>
+          </div>
+          <div class="flash-card-back">
+            <p>
+              1. String 2. Number 3. Bigint 4. Boolean 5. Undefined 6. Null 7.
+              Symbol 8. Object
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="prev-next">
+        <input type="button" name="b2" id="prev" value="Previous" />
+        <p class="card-number item">1/67</p>
+        <input type="button" name="b1" id="next" value="Next" />
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
