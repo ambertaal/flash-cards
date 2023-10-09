@@ -19,7 +19,6 @@ let questions: Question[] = [
     answer: `Both are comparison operators. The difference between both the operators is that “==” is used to compare values whereas, “ === “ is used to compare both values and types.`,
   },
   {
-    id: 4,
     question: "Difference between var and let keyword in javascript.",
     answer: `Some differences are: From the very beginning, the 'var' keyword was used in JavaScript programming whereas the keyword 'let' was just added in 2015.
   The keyword 'Var' has a function scope. Anywhere in the function, the variable specified using var is accessible but in ‘let’ the scope of a variable declared with the 'let' keyword is limited to the block in which it is declared. Let's start with a Block Scope.
@@ -27,7 +26,6 @@ let questions: Question[] = [
   `,
   },
   {
-    id: 5,
     question: "What is NaN property in JavaScript?",
     answer: `NaN property represents the “Not-a-Number” value. It indicates a value that is not a legal number.`,
   },
@@ -35,12 +33,12 @@ let questions: Question[] = [
 
 const showQuestion = document.querySelector(
   ".flash-card-front h2"
-) as HTMLHeadingElement | null;
+) as HTMLHeadingElement;
 const showAnswer = document.querySelector(
   ".flash-card-back p"
-) as HTMLParagraphElement | null;
-const prevButton = document.getElementById("prev") as HTMLButtonElement | null;
-const nextButton = document.getElementById("next") as HTMLButtonElement | null;
+) as HTMLParagraphElement;
+const prevButton = document.getElementById("prev") as HTMLButtonElement;
+const nextButton = document.getElementById("next") as HTMLButtonElement;
 
 let questionCount: number = 0;
 
