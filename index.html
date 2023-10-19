@@ -34,13 +34,13 @@
           class="prev"
           value="Previous"
         />
-        <p class="card-number item">1/67</p>
+        <p class="card-number item">1/<span id="totalCount"></span></p>
         <input type="button" name="b1" id="next" class="next" value="Next" />
       </div>
 
       <div class="form-wrapper">
         <h2>Add a flash card</h2>
-        <form action="/action_page.php">
+        <form id="questionForm">
           <label for="question">Question</label>
           <input
             type="text"
@@ -57,10 +57,12 @@
             placeholder="Write the answer here..."
           />
 
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" id="addQuestionButton" />
         </form>
       </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

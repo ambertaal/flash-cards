@@ -11,5 +11,9 @@
   "devDependencies": {
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "@firebase/firestore": "^4.3.0",
+    "firebase": "^10.5.0"
   }
 }
