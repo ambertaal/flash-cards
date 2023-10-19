@@ -32,7 +32,7 @@ const addQuestionButton = document.getElementById(
 
 addQuestionButton.onclick = function (e: any) {
   e.preventDefault();
-  console.log("I was clicked");
+  // console.log("I was clicked");
 
   const formData = new FormData(form);
   let questionTosend: { question: string; answer: string } = {} as {
@@ -42,15 +42,20 @@ addQuestionButton.onclick = function (e: any) {
   for (const [question, answer] of formData.entries()) {
     questionTosend = { ...questionTosend, [question]: answer };
   }
-  console.log(questionTosend);
+  // console.log(questionTosend);
   addItem(questionTosend.question, questionTosend.answer);
 };
 
 const totalCount = document.getElementById("totalCount") as HTMLSpanElement;
 totalCount.innerText = questions.length.toString();
 
+const currentElement = document.getElementById(
+  "currentElement"
+) as HTMLSpanElement;
+
+currentElement.innerText = "1";
+
 let questionCount: number = 0;
-console.log(questions);
 
 showQuestion.textContent = questions[questionCount].question;
 showAnswer.textContent = questions[questionCount].answer;
@@ -62,6 +67,8 @@ if (nextButton && prevButton) {
     }
     showQuestion.textContent = questions[questionCount].question;
     showAnswer.textContent = questions[questionCount].answer;
+
+    currentElement.innerText = (questionCount + 1).toString();
   });
 
   prevButton.addEventListener("click", () => {
@@ -70,5 +77,7 @@ if (nextButton && prevButton) {
     }
     showQuestion.textContent = questions[questionCount].question;
     showAnswer.textContent = questions[questionCount].answer;
+
+    currentElement.innerText = (questionCount + 1).toString();
   });
 }
